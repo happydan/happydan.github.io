@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+	<link rel="stylesheet" href="css/com.css">
+	<link rel="stylesheet" href="css/demo.css">
+</head>
+<body style="background:#f5f5f5;">
+	<div id="content">
+		<div class="qusetionTitle clearfix"><img src="images/qusetionTitle.png" alt=""></div>
+		<div class="qusetionCon">
+			<h2>1、今年暑假，您打算给孩子安排哪些活动？</h2>
+			<ul>
+				<li>A.国内主题夏令营</li>
+				<li class="checked">B.海外游学夏令营</li>
+				<li>C.国内旅游</li>
+				<li>D.培训班</li>
+			</ul>
+		</div>
+		<div class="bottomBg clearfix" id="botBg">
+			<img src="images/qusetionsBotBg.png" alt="">
+		</div>
+	</div>
+	
+	<script src="js/jquery-1.11.0.js"></script>
+	<script>
+		// var a = document.body.clientHeight;  //网页可见区域高
+		// console.log("网页可见区域高"+a);
+		// var b = window.screen.height;  //屏幕分辨率的高
+		// console.log("屏幕分辨率的高"+b);
+		// var c = document.body.scrollHeight;     //网页正文全文高
+		// console.log("网页正文全文高"+c);
+
+
+		window.onload = function(){
+			var d = window.screen.availHeight;   //屏幕可用工作区高度
+			console.log("屏幕可用工作区高度"+d);
+
+
+			var conHeight = document.getElementById("content").offsetHeight;
+			console.log("conHeight"+conHeight);
+
+			var botBg = document.getElementById("botBg");
+
+			if(conHeight < d){
+				console.log("小于");
+				//document.getElementById("content").style.height = b +"px";
+				//conHeight = b;
+				botBg.style.position = "fixed";
+				botBg.style.left = 0;
+				botBg.style.bottom = 0;
+			}
+		}
+		
+
+		
+
+	</script>
+</body>
+</html>
